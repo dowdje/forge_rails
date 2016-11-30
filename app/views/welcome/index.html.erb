@@ -1,0 +1,6 @@
+<a href="https://developer.api.autodesk.com/authentication/v1/authorize?response_type=code&client_id=XRj2rYsTCJOcbtRaW87AOY8GBjoyLGvS&redirect_uri=http%3A%2F%2Flocalhost:3000&scope=data:read data:write bucket:create bucket:read account:read user-profile:read">Click here to grant access to your data!</a>
+<% if session[:auth_code] %>
+  <h3><%= session[:auth_code] %></h3>
+  <p><%= link_to 'get refresh token', access_path %></p>
+<% end %>
+
